@@ -15,9 +15,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+    BusinessLogicLayer/applicationcore.cpp \
+    DataLayer/Models/freightcar.cpp \
+    DataLayer/Models/product.cpp \
+    DataLayer/Models/train.cpp \
+    DataLayer/Models/trainspecificstation.cpp \
+    DataLayer/datamanager.cpp \
+    UILayer/uimanager.cpp \
+    main.cpp \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    BusinessLogicLayer/applicationcore.h \
+    DataLayer/Models/freightcar.h \
+    DataLayer/Models/product.h \
+    DataLayer/Models/train.h \
+    DataLayer/Models/trainspecificstation.h \
+    DataLayer/datamanager.h \
+    UILayer/uimanager.h \
