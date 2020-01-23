@@ -19,20 +19,32 @@ public:
 
     //Init
 
-    FreightCar();
+    FreightCar(string name);
     ~FreightCar();
 
     //Public Members
 
     //Public Getters
 
+    string GetName();
+    int GetCapacity();
+    string GetSation();
+
     //Public Setters
+
+    void SetName(string name);
+    void SetCapacity(int capacity);
+    void SetStation(string station);
 
     //Public Methods
 
 private:
 
     //Private Members
+
+    string name;
+    int capacity;
+    string station;
 
     //Private Getters
 

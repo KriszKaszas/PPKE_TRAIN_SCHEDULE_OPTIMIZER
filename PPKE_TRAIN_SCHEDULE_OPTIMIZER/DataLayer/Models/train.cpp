@@ -2,7 +2,7 @@
 
 Train::Train(string trainName)
 {
-    setTrainName(trainName);
+    SetTrainName(trainName);
 }
 
 Train::~Train()
@@ -10,23 +10,32 @@ Train::~Train()
 
 }
 
-string Train::getTrainName()
+string Train::GetName()
 {
     return this->trainName;
 }
 
-vector<TrainSpecificStation> Train::getSchedule()
+int Train::GetCapacity()
+{
+    return this->capacity;
+}
+
+vector<TrainSpecificStation> Train::GetSchedule()
 {
     return this->schedule;
 }
 
-void Train::setTrainName(string trainName)
+void Train::SetTrainName(string trainName)
 {
     this->trainName = trainName;
 }
 
-void Train::AddScheduleItem(string stationName, int timeUntilDeparture)
+void Train::SetCapacity(int capacity)
 {
-    TrainSpecificStation* station = new TrainSpecificStation(stationName, timeUntilDeparture);
-    schedule.push_back(*station);
+    this->capacity = capacity;
+}
+
+void Train::AddScheduleItem(TrainSpecificStation& station)
+{
+    schedule.push_back(station);
 }

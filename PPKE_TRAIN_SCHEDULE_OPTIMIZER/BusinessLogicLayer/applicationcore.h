@@ -3,6 +3,10 @@
 
 //Project type includes
 
+#include "DataLayer/datamanager.h"
+#include <UILayer/uimanager.h>
+#include "outputmanager.h"
+
 //C++ type includes
 
 #include <vector>
@@ -30,9 +34,17 @@ public:
 
     //Public Methods
 
+    void OutputRawTrains();
+    void OutputRawFreightCars();
+    void OutputRawProducsts();
+
 private:
 
     //Private Members
+
+    DataManager *dataManager;
+    UIManager *uiManager;
+    OutputManager *outputManager;
 
     //Private Getters
 

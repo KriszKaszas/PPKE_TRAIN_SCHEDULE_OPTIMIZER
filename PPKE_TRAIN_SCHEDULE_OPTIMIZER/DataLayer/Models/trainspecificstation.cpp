@@ -1,9 +1,8 @@
 #include "trainspecificstation.h"
 
-TrainSpecificStation::TrainSpecificStation(string stationName, int timeUntilDeparture)
+TrainSpecificStation::TrainSpecificStation(string stationName)
 {
-    SetStationName(stationName);
-    SetTimeUntilDeparture(timeUntilDeparture);
+    SetName(stationName);
 }
 
 TrainSpecificStation::~TrainSpecificStation()
@@ -11,7 +10,7 @@ TrainSpecificStation::~TrainSpecificStation()
 
 }
 
-string TrainSpecificStation::GetStationName()
+string TrainSpecificStation::GetName()
 {
     return this->stationName;
 }
@@ -21,7 +20,7 @@ int TrainSpecificStation::GetTimeUntilDeparture()
     return this->timeUntilDeparture;
 }
 
-void TrainSpecificStation::SetStationName(string stationName)
+void TrainSpecificStation::SetName(string stationName)
 {
     this->stationName = stationName;
 }

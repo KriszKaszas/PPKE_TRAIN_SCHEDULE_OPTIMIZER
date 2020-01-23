@@ -5,6 +5,7 @@
 
 //C++ type includes
 
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -29,6 +30,17 @@ public:
     //Public Setters
 
     //Public Methods
+
+    ///Data Display Methods
+
+    void DisplayMessage(string message);
+    void DisplayRawData(vector<vector<string>> dataSet);
+    void DisplayData(vector<string> dataSet);
+    void DisplayData(vector<vector<string>> dataSet);
+
+    ///User Input Methods
+
+    string GetUserInput();
 
 private:
 

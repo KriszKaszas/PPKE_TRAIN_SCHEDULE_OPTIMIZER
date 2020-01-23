@@ -19,18 +19,18 @@ public:
 
     //Init
 
-    TrainSpecificStation(string stationName, int timeUntilDeparture);
+    TrainSpecificStation(string stationName);
     ~TrainSpecificStation();
 
     //Public Members
 
     //Public Getters
 
-    string GetStationName();
+    string GetName();
     int GetTimeUntilDeparture();
 
     //Public Setters
-
+    void SetTimeUntilDeparture(int timeUntilDeparture);
     //Public Methods
 
 private:
@@ -44,8 +44,8 @@ private:
 
     //Private Setters
 
-    void SetStationName(string stationName);
-    void SetTimeUntilDeparture(int timeUntilDeparture);
+    void SetName(string stationName);
+
 
     //Private Methods
 

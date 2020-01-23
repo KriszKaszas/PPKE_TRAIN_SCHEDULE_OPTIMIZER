@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     BusinessLogicLayer/applicationcore.cpp \
+    BusinessLogicLayer/outputmanager.cpp \
     DataLayer/Models/freightcar.cpp \
     DataLayer/Models/product.cpp \
     DataLayer/Models/train.cpp \
@@ -31,6 +32,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     BusinessLogicLayer/applicationcore.h \
+    BusinessLogicLayer/outputmanager.h \
     DataLayer/Models/freightcar.h \
     DataLayer/Models/product.h \
     DataLayer/Models/train.h \

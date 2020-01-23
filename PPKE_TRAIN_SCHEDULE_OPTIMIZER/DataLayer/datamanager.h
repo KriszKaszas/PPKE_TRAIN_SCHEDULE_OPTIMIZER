@@ -7,8 +7,15 @@
 #include "Models/freightcar.h"
 #include "Models/product.h"
 
+//QT type includes
+
+#include <qfile.h>
+#include <qtextstream.h>
+#include <qstring.h>
+
 //C++ type includes
 
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -30,13 +37,16 @@ public:
 
     //Public Getters
 
-    vector<Train> GetTrains();
-    vector<FreightCar> GetFreightCars;
-    vector<Product> GetProducts();
+    vector<Train>& GetTrains();
+    vector<FreightCar>& GetFreightCars();
+    vector<Product>& GetProducts();
 
     //Public Setters
 
     //Public Methods
+    void ReadTrainsFromFile(string filepath);
+    void ReadFreightCarFromFile(string filepath);
+    void ReadProductFromFile(string filepath);
 
 private:
 
@@ -50,15 +60,12 @@ private:
 
     //Private Setters
 
-    void AddTrain(Train train);
-    void AddFreightCar(FreightCar freightCar);
-    void AddProduct(Product product);
+    void AddTrain(Train& train);
+    void AddFreightCar(FreightCar& freightCar);
+    void AddProduct(Product& product);
 
     //Private Methods
 
-    void ReadTrainsFromFile(string filepath);
-    void ReadFreightCarFromFile(string filepath);
-    void ReadProductFromFile(string filepath);
 
 };
 

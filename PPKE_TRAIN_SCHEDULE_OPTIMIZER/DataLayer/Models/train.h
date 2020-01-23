@@ -28,12 +28,14 @@ public:
 
     //Public Getters
 
-    string getTrainName();
-    vector<TrainSpecificStation> getSchedule();
+    string GetName();
+    int GetCapacity();
+    vector<TrainSpecificStation> GetSchedule();
 
     //Public Setters
 
-    void AddScheduleItem(string stationName, int timeUntilDeparture);
+    void SetCapacity(int capacity);
+    void AddScheduleItem(TrainSpecificStation& station);
 
     //Public Methods
 
@@ -42,13 +44,15 @@ private:
     //Private Members
 
     string trainName;
+    int capacity;
     vector<TrainSpecificStation> schedule;
 
     //Private Getters
 
     //Private Setter
 
-    void setTrainName(string trainName);
+    void SetTrainName(string trainName);
+
 
     //Private Methods
 

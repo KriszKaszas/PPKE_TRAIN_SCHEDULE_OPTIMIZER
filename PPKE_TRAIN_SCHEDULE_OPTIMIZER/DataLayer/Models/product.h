@@ -19,20 +19,35 @@ public:
 
     //Init
 
-    Product();
+    Product(string name);
     ~Product();
 
     //Public Members
 
     //Public Getters
 
+    string GetName();
+    string GetStartingStation();
+    string GetDestinationStation();
+    int GetAmount();
+
     //Public Setters
+
+    void SetName(string name);
+    void SetStartingStation(string startingStation);
+    void SetDestinationStation(string destinationStation);
+    void SetAmount(int amount);
 
     //Public Methods
 
 private:
 
     //Private Members
+
+    string name;
+    string startingStation;
+    string destinationStation;
+    int amount;
 
     //Private Getters
 
