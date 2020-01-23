@@ -189,12 +189,6 @@ void DataManager::ReadProductFromFile(string filepath)
 
     }
     AddProduct(*product);
-//    for(Product product : products)
-//    {
-//        cout<<"Nev: " << product.GetName() << endl;
-//        cout<<"Kapacitas: " << product.GetCapacity() << endl;
-//        cout << "Allomas: " << freightCar.GetSation() << endl;
-//        cout<<endl;
-//    }
-//    file.close();
+
+    file.close();
 }
